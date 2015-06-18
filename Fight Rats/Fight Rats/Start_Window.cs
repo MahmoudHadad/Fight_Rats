@@ -21,5 +21,17 @@ namespace Fight_Rats
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Game_Window(playerName.Text).ShowDialog();
+            this.Dispose();
+        }
     }
 }

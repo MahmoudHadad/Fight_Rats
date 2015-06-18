@@ -33,7 +33,7 @@ namespace Fight_Rats
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.playerName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -45,6 +45,7 @@ namespace Fight_Rats
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(192, 126);
             this.label4.TabIndex = 5;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label1
             // 
@@ -64,14 +65,14 @@ namespace Fight_Rats
             this.label2.TabIndex = 1;
             this.label2.Text = "Your name is\r\n";
             // 
-            // textBox1
+            // playerName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(261, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 27);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "Player1";
+            this.playerName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerName.Location = new System.Drawing.Point(261, 73);
+            this.playerName.Name = "playerName";
+            this.playerName.Size = new System.Drawing.Size(147, 27);
+            this.playerName.TabIndex = 2;
+            this.playerName.Text = "Player1";
             // 
             // label3
             // 
@@ -92,6 +93,7 @@ namespace Fight_Rats
             this.button1.TabIndex = 4;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Start_Window
             // 
@@ -102,7 +104,7 @@ namespace Fight_Rats
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.playerName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -120,7 +122,7 @@ namespace Fight_Rats
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox playerName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
