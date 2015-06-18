@@ -30,13 +30,21 @@ namespace Fight_Rats
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start_Window));
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label4
+            // 
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.Location = new System.Drawing.Point(338, 103);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(192, 126);
+            this.label4.TabIndex = 5;
             // 
             // label1
             // 
@@ -85,18 +93,6 @@ namespace Fight_Rats
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            Image   i = Properties.Resources.rat1;
-            i = new Bitmap(i, new Size (label4.Width, label4.Height));
-
-            this.label4.Image = i;
-           
-            this.label4.Location = new System.Drawing.Point(348, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 106);
-            this.label4.TabIndex = 5;
-            // 
             // Start_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,7 +108,9 @@ namespace Fight_Rats
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Start_Window";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fight Rats";
+            this.Load += new System.EventHandler(this.Start_Window_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,5 +16,10 @@ namespace Fight_Rats
         {
             InitializeComponent();
         }
+
+        private void Start_Window_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
