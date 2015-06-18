@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Fight_Rats
 {
-    public partial class Form1 : Form
+    public partial class Start_Window : Form
     {
-        public Form1()
+        public Start_Window()
         {
             InitializeComponent();
         }
