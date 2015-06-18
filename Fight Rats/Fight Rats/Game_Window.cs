@@ -13,10 +13,17 @@ namespace Fight_Rats
     public partial class Game_Window : Form
     {
         private String playerName;
+        private int currentLabel = 0;
+        private int numberOfTrials = 10;
+        private int score = 0;
+        private bool isGoalClicked = false;
+ 
         public Game_Window(String playerName)
         {
             this.playerName = playerName;
             InitializeComponent();
+            this.playerNameLabel.Text = playerName;
+            setScore ( score);
             //
             // labels
             //
@@ -28,12 +35,8 @@ namespace Fight_Rats
                 this.Controls.Add(this.labels[i]);
             }
 
-
-
-
             int xLocation = 13;
-            int yLocation = 13;
-
+            int yLocation = 83;
             int initialxLocation = 25;
 
             int xSize = 100;
@@ -49,7 +52,8 @@ namespace Fight_Rats
                     this.labels[indx].Size = new System.Drawing.Size(xSize, ySize);
                     this.labels[indx].BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                     this.labels[indx].TabIndex = 0;
-                    this.labels[indx].Text = "" + indx;
+                    labels[indx].Click += new EventHandler(test);
+                   // this.labels[indx].Text = "" + indx;
 
                     xLocation += xSize + 20;
 
@@ -57,17 +61,31 @@ namespace Fight_Rats
                 yLocation += ySize + 20;
             }
         }
-
-       
-
-        private void Game_Window_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        /////////////////////////////
+        
         private void exitButton_Click(object sender, EventArgs e)
         {
             Dispose();
         }
+        /////////////////////////////
+        private void test(object sender, EventArgs e)
+        {
+            if(isGoalClicked)
+                return;
+            for (int i = 0; i < numberOfLabels;i++ )
+                if (sender == labels[i] && currentLabel == i)
+                {
+                    isGoalClicked = true;
+                    score++;
+                    MessageBox.Show("clicked", "" + i);
+                }
+             
+        }
+        /////////////////////////////
+        private void setScore(int score)
+        {
+            scoreLabel.Text = score + " / " + numberOfTrials;
+        } 
     }
 }
